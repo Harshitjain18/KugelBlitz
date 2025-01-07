@@ -1,0 +1,238 @@
+/* Global Reset / Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Body: Dark background, white text for a bold look */
+  body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #0f0f0f; /* Dark background */
+    color: #ffffff;           /* White text */
+  }
+  
+  /* Navbar */
+  .navbar {
+    display: flex;
+    align-items: center;
+    /* background-color: #000000; */
+    background-color: #000000; /* Even darker for contrast */
+    padding: 1rem;
+  }
+  
+  .logo img {
+    height: 50px;
+    margin-right: 1.5rem;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin-left: auto;
+  }
+  
+  .nav-links li {
+    margin: 0;
+  }
+  
+  .nav-links a {
+    color: #c9a128;          /* Gold accent for links */
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s, transform 0.3s;
+    border-radius: 4px;
+  }
+  
+  .nav-links a:hover {
+    background-color: #1f1f1f;
+    transform: translateY(-2px);
+  }
+  
+  .nav-links a.active {
+    background-color: #1f1f1f;
+  }
+  
+  /* Hero Section */
+  .hero {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    background: #1f1f1f;  /* Slightly lighter dark for hero */
+    min-height: 60vh;
+    margin-bottom: 2rem;
+  }
+  
+  .hero-text {
+    max-width: 600px;
+    margin-bottom: 1rem;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+    color: #c9a128; /* Gold highlight for the main heading */
+  }
+  
+  .hero-text p {
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+  }
+  
+  .cta-btn {
+    background-color: #c9a128; /* Gold button */
+    color: #0f0f0f;           /* Dark text on gold button */
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .cta-btn:hover {
+    background-color: #b08f24; /* Slightly darker gold on hover */
+    transform: scale(1.05);
+  }
+  
+  .hero-image img {
+    max-width: 400px;
+    margin: 1rem auto;
+    display: block;
+  }
+  
+  /* Content Sections */
+  .content, .subject-content, .contact-section {
+    padding: 2rem;
+    line-height: 1.7;
+    background-color: #151515; /* Another dark shade to differentiate sections */
+    margin-bottom: 2rem;
+    border-radius: 4px;
+  }
+  
+  h1, h2 {
+    margin-bottom: 0.8rem;
+    color: #c9a128;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+  }
+  
+  /* Subject List */
+  .subject-list {
+    display: flex;
+    gap: 2rem;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+  }
+  
+  .subject-list article {
+    background-color: #0f0f0f; 
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+    padding: 1rem;
+    width: 280px;
+    min-height: 220px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.6);
+  }
+  
+  .subject-list h2 {
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .subject-list p {
+    color: #f0f0f0;
+  }
+  
+  /* Contact Form */
+  .contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    gap: 1rem;
+  }
+  
+  .contact-form label {
+    font-weight: bold;
+    color: #c9a128;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: 1px solid #3a3a3a;
+    background-color: #1f1f1f;
+    color: #ffffff;
+  }
+  
+  .contact-form button {
+    background-color: #c9a128;
+    color: #0f0f0f;
+    padding: 0.75rem;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #b08f24;
+  }
+  
+  /* Footer */
+  footer {
+    text-align: center;
+    background-color: #000000;
+    color: #c9a128;
+    padding: 1rem;
+    border-top: 1px solid #3a3a3a;
+  }
+  
+  /* Animations */
+  /* Bounce In */
+  @keyframes bounceIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.8) translateY(20px);
+    }
+    20% {
+      transform: scale(1.05) translateY(-10px);
+    }
+    40%, 60% {
+      transform: scale(0.95) translateY(0);
+    }
+    80% {
+      transform: scale(1.02) translateY(-3px);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1) translateY(0);
+    }
+  }
+  .bounce-in {
+    animation: bounceIn 1.5s ease forwards;
+  }
+  
+  /* Slide In from the Left */
+  @keyframes slideInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-50px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  .slide-in {
+    animation: slideInLeft 1.2s ease forwards;
+  }
+  

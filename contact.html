@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="description" content="Contact KugelBlitz" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KugelBlitz - Contact</title>
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <img src="assets/images/logo.png" alt="KugelBlitz Logo" />
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="subjects.html">Subjects</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="contact-section slide-in">
+    <h1>Contact Us</h1>
+    <p>We’d love to hear from you! Feel free to drop us a line anytime.</p>
+    
+    <!-- EmailJS form (match your EmailJS template fields) -->
+    <form id="contactForm" class="contact-form">
+      <label for="from_name">Name:</label>
+      <input type="text" id="from_name" name="from_name" required />
+      
+      <label for="reply_to">Email:</label>
+      <input type="email" id="reply_to" name="reply_to" required />
+      
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" required></textarea>
+      
+      <button type="submit">Send</button>
+    </form>
+    <p style="margin-top: 1rem;">
+      Or reach us at <strong> info@kugelblitz.kietinfra.com</strong> or call us 
+      at <strong>+91 9582783963</strong>.
+    </p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 KugelBlitz Co. All Rights Reserved.</p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
